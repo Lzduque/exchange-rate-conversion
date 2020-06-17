@@ -57,7 +57,7 @@ function App() {
                     <h3>Convert:</h3>
                     <div className="rates">
                         <div className="rates">
-                            USD: <input type="number" id="usd" class="box" placeholder="0" value={usd} onChange={e => setUSD(e.target.value)} />
+                            USD: <input type="number" id="usd" className="box" placeholder="0" value={usd} onChange={e => setUSD(e.target.value)} />
                         </div>
                         <div className="rates">
                             CAD: {convert(usd, 'USD', 'CAD')}
