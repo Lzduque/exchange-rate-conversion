@@ -1,5 +1,30 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
-  margin: 6rem 0;
+body {
+    background-color: aliceblue;
+    color: darkgreen;
+    font-family: 'Share Tech', sans-serif;
+    font-size: larger;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.rates-today {
+    margin-top: 0px;
+}
+
+.rates {
+    margin: 10px;
+    margin-left: 0px;
+}
+
+input {
+    font-size: medium;
+    width: auto;
 }

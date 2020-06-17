@@ -49,31 +49,31 @@ function App() {
         console.log(`$${usdToCad} CAD to USD (back again!): `, convert(usdToCad, 'CAD', 'USD'));
 
         return (
-            <div>
-                <h2>Hello! Welcome to the X-Converter</h2>
+            <main>
+                <h2>Hello! Welcome to the X-Converter! $$</h2>
                 <h3>Rates today:</h3>
-                <p className="rates" >USD: {rates && rates["USD"]}, CAD: {rates && rates["CAD"]}, AUD: {rates && rates["AUD"]}, GBP: {rates && rates["GBP"]}, EUR: {rates && rates["EUR"]}</p>
-                <div>
+                <p className="rates-today" >USD: {rates && rates["USD"]}, CAD: {rates && rates["CAD"]}, AUD: {rates && rates["AUD"]}, GBP: {rates && rates["GBP"]}, EUR: {rates && rates["EUR"]}</p>
+                <div className="container">
                     <h3>Convert:</h3>
-                    <div className="rates">
+                    <div className="">
                         <div className="rates">
-                            USD: <input type="number" id="usd" className="box" placeholder="0" value={usd} onChange={e => setUSD(e.target.value)} />
+                            USD: $<input type="number" id="usd" className="box" placeholder="0" value={usd} onChange={e => setUSD(e.target.value)} />
                         </div>
                         <div className="rates">
-                            CAD: {convert(usd, 'USD', 'CAD')}
+                            CAD: ${convert(usd, 'USD', 'CAD').toFixed(2)}
                         </div>
                         <div className="rates">
-                            AUD: {convert(usd, 'USD', 'AUD')}
+                            AUD: ${convert(usd, 'USD', 'AUD').toFixed(2)}
                         </div>
                         <div className="rates">
-                            GBP: {convert(usd, 'USD', 'GBP')}
+                            GBP: ${convert(usd, 'USD', 'GBP').toFixed(2)}
                         </div>
                         <div className="rates">
-                            EUR: {convert(usd, 'USD', 'EUR')}
+                            EUR: ${convert(usd, 'USD', 'EUR').toFixed(2)}
                         </div>
                     </div>
                 </div>
-            </div>
+            </main>
         );
     }
 }
