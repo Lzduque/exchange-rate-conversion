@@ -47,6 +47,8 @@ p {
     width: 7em;
     padding: 0.2em;
     margin-left: 0.2em;
+    border-radius: 0.5em;
+    border-color: #ececec;
 }
 
 .box {
