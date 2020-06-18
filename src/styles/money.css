@@ -1,0 +1,12 @@
+.money {
+    text-align: center;
+    &-first {
+        transition: transform .2s ease-in-out;
+    }
+     :hover {
+        .money-first {
+            transform: translateY(-25px);
+            transform-origin: 50%;
+        }
+    }
+}

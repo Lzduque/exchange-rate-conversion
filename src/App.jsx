@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './styles/index.css';
+import Money from './Components/Money.jsx';
 
 function App() {
     const [error, setError] = useState(null);
@@ -49,27 +50,36 @@ function App() {
         console.log(`$${usdToCad} CAD to USD (back again!): `, convert(usdToCad, 'CAD', 'USD'));
 
         return (
-            <main>
-                <h2>Hello! Welcome to the X-Converter! $$</h2>
-                <h3>Rates today:</h3>
-                <p className="rates-today" >USD: {rates && rates["USD"]}, CAD: {rates && rates["CAD"]}, AUD: {rates && rates["AUD"]}, GBP: {rates && rates["GBP"]}, EUR: {rates && rates["EUR"]}</p>
-                <div className="container">
+            <main className="box">
+                <div className="box title">
+                    <Money />
+                    <h2>Welcome to the X-Converter!</h2>
+                </div>
+                <div className="box rates-today">
+                    <h3>Rates today:</h3>
+                    <p className="" >USD: {rates && rates["USD"]}, CAD: {rates && rates["CAD"]}, AUD: {rates && rates["AUD"]}, GBP: {rates && rates["GBP"]}, EUR: {rates && rates["EUR"]}</p>
+                </div>
+                <div className="box convert">
                     <h3>Convert:</h3>
-                    <div className="">
-                        <div className="rates">
-                            USD: $<input type="number" id="usd" className="box" placeholder="0" value={usd} onChange={e => setUSD(e.target.value)} />
+                    <div className="rate-usd">
+                        USD: $<input type="number" id="usd" className="" placeholder="0" value={usd} onChange={e => setUSD(e.target.value)} />
+                    </div>
+                    <div className="rates ">
+                        <div className="rates-column">
+                            <div className="rate">
+                                CAD: ${convert(usd, 'USD', 'CAD').toFixed(2)}
+                            </div>
+                            <div className="rate">
+                                AUD: ${convert(usd, 'USD', 'AUD').toFixed(2)}
+                            </div>
                         </div>
-                        <div className="rates">
-                            CAD: ${convert(usd, 'USD', 'CAD').toFixed(2)}
-                        </div>
-                        <div className="rates">
-                            AUD: ${convert(usd, 'USD', 'AUD').toFixed(2)}
-                        </div>
-                        <div className="rates">
-                            GBP: ${convert(usd, 'USD', 'GBP').toFixed(2)}
-                        </div>
-                        <div className="rates">
-                            EUR: ${convert(usd, 'USD', 'EUR').toFixed(2)}
+                        <div className="rates-column">
+                            <div className="rate">
+                                GBP: ${convert(usd, 'USD', 'GBP').toFixed(2)}
+                            </div>
+                            <div className="rate">
+                                EUR: ${convert(usd, 'USD', 'EUR').toFixed(2)}
+                            </div>
                         </div>
                     </div>
                 </div>

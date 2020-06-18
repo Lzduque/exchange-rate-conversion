@@ -1,6 +1,6 @@
 body {
-    background-color: aliceblue;
-    color: darkgreen;
+    background-color: #acd8d2;
+    color: #0F5A4F;
     font-family: 'Share Tech', sans-serif;
     font-size: larger;
 }
@@ -9,10 +9,24 @@ main {
     display: flex;
     flex-direction: column;
     margin: 2em;
+    background-color: #ececec;
 }
 
 h2 {
     font-size: 2em;
+    margin: 0px;
+    margin-top: 0.5em;
+    color: #073f37;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin: 0px;
+    color: #073f37;
+}
+
+p {
+    margin-bottom: 0px;
 }
 
 .rates-today {
@@ -20,11 +34,53 @@ h2 {
 }
 
 .rates {
-    margin: 10px;
-    margin-left: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-input {
+#usd {
     font-size: medium;
-    width: 6em;
+    width: 7em;
+    padding: 0.2em;
+    margin-left: 0.2em;
+}
+
+.box {
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.title {
+    background-color: white;
+}
+
+.rates-today {
+    background-color: white;
+    margin-top: 1em;
+}
+
+.convert {
+    background-color: white;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.rate-usd {
+    margin: 1em;
+    text-align: center;
+}
+
+.rates-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.rate {
+    height: 2em;
 }
